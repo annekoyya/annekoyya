@@ -1,5 +1,4 @@
-## Stan TXT 👋
-## Stan ZB1 👋
+## Stan TXT and ZB1
 
 [![I love men](https://img.youtube.com/vi/80SH8Z_DOnY/maxresdefault.jpg)](https://www.youtube.com/watch?v=80SH8Z_DOnY)
 
