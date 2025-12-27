@@ -25,12 +25,12 @@
 
 ---
 
-<!-- 🌸 Stats -->
-## 📊 My GitHub Stats
+## 📊 My GitHub Stats 🎀
 <p align="center">
-  <img height="150em" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight" />
-  <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&hide=html,css&layout=compact&theme=tokyonight" />
+  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=annekoyya&show_icons=true&theme=rose_pine&title_color=ff9acb&icon_color=ff9acb&text_color=fadadd" />
+  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=annekoyya&layout=compact&theme=rose_pine&title_color=ff9acb&text_color=fadadd" />
 </p>
+
 
 ---
 
@@ -38,7 +38,6 @@
 ## 🌸 Fun & Cute
 <p align="center">
   <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="200" alt="Cute GIF"/>
-  <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" width="200" alt="Kawaii GIF"/>
 </p>
 
 ---
