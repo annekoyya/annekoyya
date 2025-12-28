@@ -26,7 +26,7 @@
 ---
 
 ## 📊 My GitHub Stats 🎀
-<p align="center">
+//<p align="center">
   <img height="160em" src="https://github-readme-stats.vercel.app/api?username=annekoyya&show_icons=true&theme=rose_pine&title_color=ff9acb&icon_color=ff9acb&text_color=fadadd" />
   <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=annekoyya&layout=compact&theme=rose_pine&title_color=ff9acb&text_color=fadadd" />
 </p>
