@@ -25,12 +25,6 @@
 
 ---
 
-## 📊 My GitHub Stats 🎀
-
-
-
----
-
 <!-- 💖 Fun Section -->
 ## 🌸 Fun & Cute
 <p align="center">
