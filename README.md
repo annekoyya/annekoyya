@@ -24,9 +24,6 @@
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
 
 ---
-
-<!-- 💖 Fun Section -->
-## 🌸 Fun & Cute
 <p align="center">
   <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="200" alt="Cute GIF"/>
 </p>
