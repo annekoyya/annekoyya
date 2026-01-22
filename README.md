@@ -1,7 +1,7 @@
 
 <!-- 🌸 Welcome Section -->
 <h1 align="center">Hi there! 🌸 I'm Annikaaaa 💖</h1>
-<p align="center">Pls hire me.Im a girl so id be good for diversity in ur male domindated dev team</p>
+<p align="center">Pls hire me. Im a girl so id be good for diversity in ur male domindated dev team</p>
 
 ---
 
