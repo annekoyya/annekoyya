@@ -1,6 +1,6 @@
 
 <!-- 🌸 Welcome Section -->
-<h1 align="center">Hi there! 🌸 I'm Annikaaaa 💖</h1>
+<h1 align="center">Hi there! 🌸 I'm Annikaa 💖</h1>
 
 ---
 
