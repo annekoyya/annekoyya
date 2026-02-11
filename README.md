@@ -6,7 +6,6 @@
 <!-- 👩‍💻 About Me -->
 ## 💕 About Me
 - 🌸 I like to make craftss
-- 🎀 I enjoy making cute UI designs and small projects
 - 📫 How to reach me: [ramirezannikalois@gmail.com](mailto:email@example.com)
 - 🌈 Always learning new things
 
