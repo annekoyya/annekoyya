@@ -9,8 +9,6 @@
 - 📫 How to reach me: [ramirezannikalois@gmail.com](mailto:email@example.com)
 - 🌈 Always learning new things
 
----
-
 <p align="center">
   🌸 Thank you for visiting my GitHub! 🌸
 </p>
