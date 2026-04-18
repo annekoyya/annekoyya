@@ -1,7 +1,7 @@
 
 <h1 align="center">Hi there! 🌸 I'm Annika Lois 💖</h1
 
----
+
 
 <!-- 👩‍💻 About Me -->
 ## 💕 About Me
