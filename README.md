@@ -5,7 +5,6 @@
 
 <!-- 👩‍💻 About Me -->
 ## 💕 About Me
-- 🌸 I like to make craftss
 - 📫 How to reach me: [ramirezannikalois@gmail.com](mailto:email@example.com)
 
 <p align="center">
