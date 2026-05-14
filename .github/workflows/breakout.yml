@@ -2,8 +2,8 @@ name: "Generate Breakout Game SVG"
 
 on:
   schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+    - cron: "0 0 * * *"   # Daily at midnight UTC
+  workflow_dispatch:        # Allow manual runs
 
 jobs:
   build:
@@ -13,33 +13,53 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout repository
+      # ── 1. Checkout your profile repo ─────────────────────────────────────────
+      - name: Checkout annekoyya/annekoyya
         uses: actions/checkout@v4
 
+      # ── 2. Checkout the breakout code from your public repo ───────────────────
+      - name: Checkout github-breakout code
+        uses: actions/checkout@v4
+        with:
+          repository: annekoyya/github-breakout
+          path: ./github-breakout
+
+      # ── 3. Set up Python ──────────────────────────────────────────────────────
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
+      # ── 4. Install dependencies (if any) ──────────────────────────────────────
+      - name: Install dependencies
+        run: |
+          pip install requests  # Add any other packages your generate.py needs
+
+      # ── 5. Generate SVGs using your script ────────────────────────────────────
       - name: Generate SVG files
         run: |
+          cd ./github-breakout
           python src/generate.py \
-            --username "${{ github.repository_owner }}" \
+            --username "annekoyya" \
             --token "${{ secrets.GITHUB_TOKEN }}" \
-            --output "./output" \
+            --output "../output" \
             --paddle-color "#FF5722" \
             --ball-color "#FFEB3B" \
             --bricks-colors "#EBEDF0,#9BE9A8,#40C463,#30A14E,#216E39"
 
+      # ── 6. Deploy SVGs to github-breakout branch ──────────────────────────────
       - name: Deploy SVGs to github-breakout branch
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          cp output/light.svg /tmp/light.svg 2>/dev/null || true
-          cp output/dark.svg /tmp/dark.svg 2>/dev/null || true
-          cp output/custom.svg /tmp/custom.svg 2>/dev/null || true
+          # Save SVGs to temp location
+          mkdir -p /tmp/breakout
+          cp output/light.svg /tmp/breakout/light.svg 2>/dev/null || true
+          cp output/dark.svg /tmp/breakout/dark.svg 2>/dev/null || true
+          cp output/custom.svg /tmp/breakout/custom.svg 2>/dev/null || true
 
+          # Create or switch to orphan branch
           git fetch origin github-breakout 2>/dev/null || true
           if git show-ref --quiet refs/remotes/origin/github-breakout; then
             git checkout github-breakout
@@ -48,19 +68,23 @@ jobs:
             git rm -rf . --quiet || true
           fi
 
-          cp /tmp/light.svg light.svg 2>/dev/null || true
-          cp /tmp/dark.svg dark.svg 2>/dev/null || true
-          cp /tmp/custom.svg custom.svg 2>/dev/null || true
+          # Copy SVGs and commit
+          cp /tmp/breakout/light.svg light.svg 2>/dev/null || true
+          cp /tmp/breakout/dark.svg dark.svg 2>/dev/null || true
+          cp /tmp/breakout/custom.svg custom.svg 2>/dev/null || true
 
           git add light.svg dark.svg custom.svg
           git diff --cached --quiet || git commit -m "chore: update breakout SVGs [$(date -u '+%Y-%m-%d %H:%M UTC')]"
           git push origin github-breakout --force
 
+      # ── 7. Show README snippet ─────────────────────────────────────────────────
       - name: Print README snippet
         run: |
-          echo "Add this to your README.md:"
+          echo ""
+          echo "✅ Copy and paste this into your README.md:"
+          echo ""
           echo '<picture>'
-          echo '  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/github-breakout/dark.svg" />'
-          echo '  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/github-breakout/light.svg" />'
-          echo '  <img alt="GitHub Contribution Breakout" src="https://raw.githubusercontent.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/github-breakout/light.svg" />'
+          echo '  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/annekoyya/annekoyya/github-breakout/dark.svg" />'
+          echo '  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/annekoyya/annekoyya/github-breakout/light.svg" />'
+          echo '  <img alt="GitHub Contribution Breakout" src="https://raw.githubusercontent.com/annekoyya/annekoyya/github-breakout/light.svg" />'
           echo '</picture>'
