@@ -1,0 +1,66 @@
+name: "Generate Breakout Game SVG"
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Generate Contribution Breakout SVG
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate SVG files
+        run: |
+          python src/generate.py \
+            --username "${{ github.repository_owner }}" \
+            --token "${{ secrets.GITHUB_TOKEN }}" \
+            --output "./output" \
+            --paddle-color "#FF5722" \
+            --ball-color "#FFEB3B" \
+            --bricks-colors "#EBEDF0,#9BE9A8,#40C463,#30A14E,#216E39"
+
+      - name: Deploy SVGs to github-breakout branch
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          cp output/light.svg /tmp/light.svg 2>/dev/null || true
+          cp output/dark.svg /tmp/dark.svg 2>/dev/null || true
+          cp output/custom.svg /tmp/custom.svg 2>/dev/null || true
+
+          git fetch origin github-breakout 2>/dev/null || true
+          if git show-ref --quiet refs/remotes/origin/github-breakout; then
+            git checkout github-breakout
+          else
+            git checkout --orphan github-breakout
+            git rm -rf . --quiet || true
+          fi
+
+          cp /tmp/light.svg light.svg 2>/dev/null || true
+          cp /tmp/dark.svg dark.svg 2>/dev/null || true
+          cp /tmp/custom.svg custom.svg 2>/dev/null || true
+
+          git add light.svg dark.svg custom.svg
+          git diff --cached --quiet || git commit -m "chore: update breakout SVGs [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git push origin github-breakout --force
+
+      - name: Print README snippet
+        run: |
+          echo "Add this to your README.md:"
+          echo '<picture>'
+          echo '  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/github-breakout/dark.svg" />'
+          echo '  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/github-breakout/light.svg" />'
+          echo '  <img alt="GitHub Contribution Breakout" src="https://raw.githubusercontent.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/github-breakout/light.svg" />'
+          echo '</picture>'
