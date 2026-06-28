@@ -213,6 +213,8 @@
   <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=annekoyya" alt="annekoyya" />
 </p>
 
-## Play Breakout with my GitHub contributions!
+## 🚀 Break My GitHub Commits!
 
-[![GitHub Breakout](https://img.shields.io/badge/🎮_PLAY-GitHub_Breakout-39d353?style=for-the-badge&labelColor=0d1117)](https://annekoyya.github.io/github-breakout/)
+Wanna smash my contribution graph? Play **GitHub Breakout** and break all my commits! 💥
+
+[![GitHub Breakout](https://img.shields.io/badge/🎮_Play_Now-GitHub_Breakout-39d353?style=for-the-badge&labelColor=0d1117)](https://annekoyya.github.io/github-breakout2/)
