@@ -212,3 +212,7 @@
 ## 🎮 Play Breakout with my GitHub contributions!
 
 [![GitHub Breakout](https://img.shields.io/badge/🎮_PLAY-GitHub_Breakout-39d353?style=for-the-badge&labelColor=0d1117)](https://annekoyya.github.io/github-breakout2/)
+
+## Play Breakout with my GitHub contributions!
+
+[![GitHub Breakout](https://img.shields.io/badge/🎮_PLAY-GitHub_Breakout-39d353?style=for-the-badge&labelColor=0d1117)](https://annekoyya.github.io/github-breakout2/)
