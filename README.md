@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Annika Lois Dumalogdog</h1>
-<h3 align="center">A passionate frontend developer from Philippines</h3>
+<h3 align="center">Please hire me <3</h3>
 
 <p align="left"> 
   <img src="https://komarev.com/ghpvc/?username=annekoyya&label=Profile%20views&color=0e75b6&style=flat" alt="annekoyya" /> 
@@ -212,3 +212,7 @@
 <p>
   <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=annekoyya" alt="annekoyya" />
 </p>
+
+## Play Breakout with my GitHub contributions!
+
+[![GitHub Breakout](https://img.shields.io/badge/🎮_PLAY-GitHub_Breakout-39d353?style=for-the-badge&labelColor=0d1117)](https://annekoyya.github.io/github-breakout/)
