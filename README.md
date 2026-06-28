@@ -16,7 +16,7 @@
 - 👯 I'm looking to collaborate on **hackathons and events**
 - 👨‍💻 All of my projects are available at [https://nika-portfolio-rho.vercel.app/](https://nika-portfolio-rho.vercel.app/)
 - 📫 How to reach me **a.dumalogdog.547692@umindanao.edu.ph**
-- ⚡ Fun fact **I think I am very capable**
+- ⚡ Fun fact **I like learning a lot of things <3**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
