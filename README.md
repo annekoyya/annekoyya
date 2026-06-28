@@ -5,11 +5,7 @@
   <img src="https://komarev.com/ghpvc/?username=annekoyya&label=Profile%20views&color=0e75b6&style=flat" alt="annekoyya" /> 
 </p>
 
-<p align="left"> 
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=annekoyya" alt="annekoyya" />
-  </a> 
-</p>
+
 
 - 🔭 I'm currently working on **a personal project**
 - 🌱 I'm currently learning **Three.js, and mobile development**
@@ -213,8 +209,6 @@
   <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=annekoyya" alt="annekoyya" />
 </p>
 
-## 🚀 Break My GitHub Commits!
+## 🎮 Play Breakout with my GitHub contributions!
 
-Wanna smash my contribution graph? Play **GitHub Breakout** and break all my commits! 💥
-
-[![GitHub Breakout](https://img.shields.io/badge/🎮_Play_Now-GitHub_Breakout-39d353?style=for-the-badge&labelColor=0d1117)](https://annekoyya.github.io/github-breakout2/)
+[![GitHub Breakout](https://img.shields.io/badge/🎮_PLAY-GitHub_Breakout-39d353?style=for-the-badge&labelColor=0d1117)](https://annekoyya.github.io/github-breakout2/)
