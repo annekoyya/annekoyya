@@ -196,6 +196,11 @@
 
 ---
 
+
+![snake gif](https://github.com/annekoyya/annekoyya/blob/output/github-snake-dark.svg)
+
+---
+
 <h3 align="left">GitHub Stats:</h3>
 <p>
   <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=annekoyya&show_icons=true&locale=en&layout=compact" alt="annekoyya" />
